@@ -5,7 +5,9 @@ import os
 from datetime import datetime
 
 # --- Config ---
-BOT_TOKEN = "8494698144:AAFMZo5_g2YqigtQp641yLTcJo8Nx86yNmQ"
+import os
+BOT_TOKEN = os.getenv("BOT_TOKEN")
+
 API_URL = f"https://api.telegram.org/bot{BOT_TOKEN}"
 
 # --- File to store per-user friends ---
@@ -163,3 +165,4 @@ while True:
         print("Error:", e)
 
     time.sleep(30)  # check every 30s
+
